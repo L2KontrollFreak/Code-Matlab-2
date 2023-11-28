@@ -28,13 +28,13 @@ for i=1:length(D)
     if 50 > D(i) && D(i) > 0
         D(i) = 0
         opexp(i) = 0.003*W*D(i)+45
-    elseif 100 > D(i) && D(i) >= 50
+    elseif 100 > D(i) & D(i) >= 50
         D(i) = 50
         opexp(i) = 0.003*W*D(i)+45
-    elseif 150 > D(i) && D(i) >= 100
+    elseif 150 > D(i) & D(i) >= 100
         D(i) = 100
         opexp(i) = 0.003*W*D(i)+45
-    elseif 200 > D(i) && D(i) >= 150
+    elseif 200 > D(i) & D(i) >= 150
         D(i) = 150
         opexp(i) = 0.003*W*D(i)+45
     elseif D(i) >= 250
