@@ -1,7 +1,8 @@
 %% ENGR-10, 11/28/2023; Intro to ENG 10.; Author:Darien Marble;
 clc; format compact;
 
-% problem 1 - plotting.
+% problem 1 - plotting. y(t) = e-8t sin(9.7t + Pi/2)
+
 figure(1); plot(X.Y,)
 
 
