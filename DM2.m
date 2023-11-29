@@ -2,6 +2,14 @@
 clc; format compact;
 
 % problem 1 - plotting. y(t) = e-8t sin(9.7t + Pi/2)
+y=@(t)(exp(-8*t)*sin(9.7*t+pi/2));
+x=[linspace(0,5,40)]; % time vector for x values
+plot(x,y(x),'r'); % red line plot of the function
+title('Sortic Pressure response')
+xlabel('Time (s)')
+ylabel('Amplitude')
+grid on
+
 
 figure(1); plot(X.Y,)
 
