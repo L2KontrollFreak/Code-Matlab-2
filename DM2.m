@@ -67,3 +67,9 @@ while total < 1e+4
 end
 fprintf('The Number of terms is: %g \n' , k)
   fprintf ('The sum is: %g \n' , total)
+
+  % Problem 6 - while loop for the last time
+  amount = amount*1.05 + 500;
+  while amount < 1e+7
+  amount = amount * 1.05 + 500;
+  end
