@@ -1,6 +1,21 @@
 %% ENGR-10, 11/28/2023; Intro to ENG 10.; Author:Darien Marble;
 clc; format compact;
 
+% create a plotting graph
+% Define the range of t
+t = linspace(0,10,1000);
+
+% Calculate the corresponding values of y
+y = exp(-8*t).*sin(9.7*t + pi/2);
+
+% Plot y against t
+plot(t,y);
+xlabel('t (sec)');
+ylabel('Normalized pressure difference y(t)');
+title('Plot of y(t) = exp(-8t)sin(9.7t+pi/2)');
+grid on;
+
+
 
 
 
