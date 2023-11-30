@@ -42,7 +42,7 @@ for i=1:length(D)
 end
 
 % Problem 4 - While loop
-X = 5;
+x = 5;
 while x < 25
     disp(x)
     x = 2*x - 1;
