@@ -1,22 +1,20 @@
 %% ENGR-10, 11/28/2023; Intro to ENG 10.; Author:Darien Marble;
 clc; format compact;
 
-// Plotting code for sortic pressure response
-
-// Function for sortic pressure response
+% Function for sortic pressure response
 y = @(t)(exp(-8*t)*sin(9.7*t+pi/2));
 
-// Time vector for x values
+% Time vector for x values
 x = linspace(0,5,40);
 
-// Plotting function
+% Plotting function
 plot(x,y(x),'LineWidth',2,'Color','red'); % red line plot of the function
 title('Sortic Pressure Response', 'FontSize', 14, 'FontWeight', 'bold');
 xlabel('Time (s)', 'FontSize', 12, 'FontWeight', 'bold');
 ylabel('Amplitude', 'FontSize', 12, 'FontWeight', 'bold');
 grid on;
 
-// Display the plot
+% Display the plot
 drawnow;
 
 
