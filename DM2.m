@@ -1,29 +1,13 @@
 %% ENGR-10, 11/28/2023; Intro to ENG 10.; Author:Darien Marble;
 clc; format compact;
 
-% Function for sortic pressure response
-y = @(t)(exp(-8*t)*sin(9.7*t+pi/2));
-
-% Time vector for x values
-x = linspace(0,5,40);
-
-% Plotting function
-plot(x,y(x),'LineWidth',2,'Color','red'); % red line plot of the function
-title('Sortic Pressure Response', 'FontSize', 14, 'FontWeight', 'bold');
-xlabel('Time (s)', 'FontSize', 12, 'FontWeight', 'bold');
-ylabel('Amplitude', 'FontSize', 12, 'FontWeight', 'bold');
-grid on;
-
-% Display the plot
-drawnow;
-
 
 
 
 
 
 % problem 2 - advanced plotting
-[X,Y] = meshgird(-8: .5:8);
+[X,Y] = meshgrid(-8:.5:8);
 R = sqrt(X.^2 + Y.^2) + eps;
 Z = sin(R)./R;
 figure(3)
@@ -42,13 +26,13 @@ for i=1:length(D)
     if 50 > D(i) && D(i) > 0
         D(i) = 0
         opexp(i) = 0.003*W*D(i)+45
-    elseif 100 > D(i) & D(i) >= 50
+    elseif 100 > D(i) && D(i) >= 50
         D(i) = 50
         opexp(i) = 0.003*W*D(i)+45
-    elseif 150 > D(i) & D(i) >= 100
+    elseif 150 > D(i) && D(i) >= 100
         D(i) = 100
         opexp(i) = 0.003*W*D(i)+45
-    elseif 200 > D(i) & D(i) >= 150
+    elseif 200 > D(i) && D(i) >= 150
         D(i) = 150
         opexp(i) = 0.003*W*D(i)+45
     elseif D(i) >= 250
@@ -73,9 +57,3 @@ while total < 1e+4
 end
 fprintf('The Number of terms is: %g \n' , k)
   fprintf ('The sum is: %g \n' , total)
-
-  % Problem 6 - while loop for the last time
-  amount = amount*1.05 + 500;
-  while amount < 1e+7
-  amount = amount * 1.05 + 500;
-  end
